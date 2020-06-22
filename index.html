@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Symulator procesora Intel 8086</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <section class="container">
+    <h1>Symulator procesora Intel 8086</h1>
+    <div class="cpu">
+      <form class="simulator">
+        <h3>AX</h3><input type="text" id="ax" class="reg_ax">
+        <h3>BX</h3><input type="text" id="bx" class="reg_bx">
+        <h3>CX</h3><input type="text" id="cx" class="reg_cx">
+        <h3>DX</h3><input type="text" id="dx" class="reg_dx">
+        <h3>Pobierz z</h3>
+        <select onchange="show()" id="from" class="from">
+          <option value="AX">AX</option>
+          <option value="BX">BX</option>
+          <option value="CX">CX</option>
+          <option value="DX">DX</option>
+        </select>
+        <h3>Przenieś do</h3>
+        <select onchange="show()" id="to" class="to">
+          <option value="AX">AX</option>
+          <option value="BX">BX</option>
+          <option value="CX">CX</option>
+          <option value="DX">DX</option>
+        </select>
+        <h3 id="show"></h3>
+        <button class="button" type="button">MOV</button>
+      </form>
+    </div>
+    <img src="intel.png" alt="intel">
+  </section>
+  <script src="script.js"></script>
+</body>
+
+</html>
